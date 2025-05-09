@@ -3,7 +3,7 @@ import { Image, ScrollView, StyleSheet, Text, View, ImageBackground } from 'reac
 import { SvgProps } from 'react-native-svg'
 
 import onBoardingOrganizeEase from '../assets/img/onBoardingOrganizeease.svg'
-import onBoardingDataSafe from '../assets/img/onBoardingdatasafe.svg'
+import onBoardingDataSafe from '../assets/img/onboarding.svg'
 import Button, { ButtonType } from '../components/buttons/Button'
 import { useStore } from '../contexts/store'
 import { styles } from '../onboardingStyles'
@@ -87,7 +87,7 @@ const OnboardingPages = (onTutorialCompleted: GenericFn): Array<Element> => {
         <View style={styles.endPageContainer}>
           <Text style={[defaultStyle.headerText, styles.headerText, { marginTop: 20 }]}>Share Securely</Text>
           <ScrollView style={styles.ScrollView} contentContainerStyle={{ justifyContent: 'center' }}>
-            <Image source={require('../assets/img/onboarding.svg')} style={[styles.backgroundImage]} />
+            <Image source={require('../assets/img/onBoardingSharesecurely.png')} style={[styles.backgroundImage]} />
             <View style={styles.descriptionText}>
               <Text style={[styles.bodyText]}>
                 Take complete control over your data. Securely connect with people and organizations to share necessary
@@ -122,8 +122,8 @@ const OnboardingPages = (onTutorialCompleted: GenericFn): Array<Element> => {
 
         <View style={styles.descriptionText}>
           <Text style={[styles.bodyText]}>
-            Unlock the power of your digital identity with our all-in-one wallet! Let's embark on a journey to take full
-            control of your digital presence.
+            Unlock the power of Digital Trust with our all-in-one wallet! Let's embark on a journey to take full control
+            of your digital presence.
           </Text>
         </View>
       </ScrollView>
@@ -138,12 +138,12 @@ const OnboardingPages = (onTutorialCompleted: GenericFn): Array<Element> => {
     {
       image: onBoardingDataSafe,
       title: 'Keep your data safe',
-      body: 'Safeguard your digital Credentials with CREDEBL, ensuring that your data remains protected and shared with your consent only.',
+      body: 'Safeguard your digital Credentials with ConfirmD, ensuring that your data remains protected and shared with your consent only.',
     },
     {
       image: onBoardingOrganizeEase,
       title: 'Organize with ease',
-      body: 'Organize and manage your digital credentials effortlessly within CREDEBL. Say goodbye to paper documents and embrace the convenience of an identity wallet in your hand.',
+      body: 'Organize and manage your digital credentials effortlessly within ConfirmD. Say goodbye to paper documents and embrace the convenience of an identity wallet in your hand.',
     },
   ]
 

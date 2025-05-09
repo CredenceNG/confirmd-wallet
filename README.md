@@ -1,11 +1,11 @@
 <div align="center">
-  <h1>CREDEBL Mobile SSI Wallet</h1>
+  <h1>ConfirmD Mobile SSI Wallet</h1>
 </div>
 
 ## Prerequisites
 
 - Set-up requires [Node.js](https://nodejs.org/en/download/) to be installed on your computer.
-  - The `CREDEBL SSI Wallet` requires `Node.js v18` to build the project. You can either manually install Node version 18, or you can use a version manager like [nvm](https://github.com/nvm-sh/nvm)
+  - The `ConfirmD SSI Wallet` requires `Node.js v18` to build the project. You can either manually install Node version 18, or you can use a version manager like [nvm](https://github.com/nvm-sh/nvm)
 - We use [Yarn](https://yarnpkg.com) as our package manager.
 - We use [CocoaPods](https://cocoapods.org/) for `iOS` dependency management.
 
@@ -103,9 +103,7 @@ We welcome contributions from the community to improve CREDEBL SSI Wallet. If yo
 
 ## Get help
 
-* Get help, request features and report bugs: <a href="https://github.com/orgs/credebl/discussions" target="_blank">GitHub Discussions</a> | <a href="https://docs.credebl.id" target="_blank">docs.credebl.id</a>
-
-
+- Get help, request features and report bugs: <a href="https://github.com/orgs/credebl/discussions" target="_blank">GitHub Discussions</a> | <a href="https://docs.credebl.id" target="_blank">docs.credebl.id</a>
 
 ## License
 
