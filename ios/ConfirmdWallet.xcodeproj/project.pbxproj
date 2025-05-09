@@ -7,15 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		00E356F31AD99517003FC87E /* AdeyaWalletTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* AdeyaWalletTests.m */; };
+		00E356F31AD99517003FC87E /* ConfirmdWalletTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* ConfirmdWalletTests.m */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		156683D461F3F88414DB26E7 /* libPods-AdeyaWallet.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E605A541B16C3BB4C72E1446 /* libPods-AdeyaWallet.a */; };
+		156683D461F3F88414DB26E7 /* libPods-ConfirmdWallet.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E605A541B16C3BB4C72E1446 /* libPods-ConfirmdWallet.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		873E9A1A2ABC1965007BBE48 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 873E9A192ABC1965007BBE48 /* GoogleService-Info.plist */; };
 		B010F2667BDA735AB0BE7F50 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 0E4BFDAE9A3082CAA636A18C /* PrivacyInfo.xcprivacy */; };
-		F2240E12B05A470AE6226C40 /* libPods-AdeyaWallet-AdeyaWalletTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D7C8A2ADDBCA31C2A2065DD8 /* libPods-AdeyaWallet-AdeyaWalletTests.a */; };
+		F2240E12B05A470AE6226C40 /* libPods-ConfirmdWallet-ConfirmdWalletTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D7C8A2ADDBCA31C2A2065DD8 /* libPods-ConfirmdWallet-ConfirmdWalletTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -24,30 +24,30 @@
 			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 13B07F861A680F5B00A75B9A;
-			remoteInfo = AdeyaWallet;
+			remoteInfo = "ConfirmdWallet";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		00E356EE1AD99517003FC87E /* AdeyaWalletTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AdeyaWalletTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		00E356EE1AD99517003FC87E /* ConfirmdWalletTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ConfirmdWalletTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		00E356F21AD99517003FC87E /* AdeyaWalletTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AdeyaWalletTests.m; sourceTree = "<group>"; };
-		0E4BFDAE9A3082CAA636A18C /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xml; name = PrivacyInfo.xcprivacy; path = AdeyaWallet/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
-		13B07F961A680F5B00A75B9A /* AdeyaWallet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AdeyaWallet.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = AdeyaWallet/AppDelegate.h; sourceTree = "<group>"; };
-		13B07FB01A68108700A75B9A /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AppDelegate.mm; path = AdeyaWallet/AppDelegate.mm; sourceTree = "<group>"; };
-		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = AdeyaWallet/Images.xcassets; sourceTree = "<group>"; };
-		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = AdeyaWallet/Info.plist; sourceTree = "<group>"; };
-		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = AdeyaWallet/main.m; sourceTree = "<group>"; };
-		80BFF1540D2432558196D6FB /* Pods-AdeyaWallet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AdeyaWallet.release.xcconfig"; path = "Target Support Files/Pods-AdeyaWallet/Pods-AdeyaWallet.release.xcconfig"; sourceTree = "<group>"; };
-		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = AdeyaWallet/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		00E356F21AD99517003FC87E /* ConfirmdWalletTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "ConfirmdWalletTests.m"; sourceTree = "<group>"; };
+		0E4BFDAE9A3082CAA636A18C /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xml; name = PrivacyInfo.xcprivacy; path = ConfirmdWallet/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		13B07F961A680F5B00A75B9A /* ConfirmdWallet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ConfirmdWallet.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = "ConfirmdWallet/AppDelegate.h"; sourceTree = "<group>"; };
+		13B07FB01A68108700A75B9A /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AppDelegate.mm; path = "ConfirmdWallet/AppDelegate.mm"; sourceTree = "<group>"; };
+		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = "ConfirmdWallet/Images.xcassets"; sourceTree = "<group>"; };
+		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = "ConfirmdWallet/Info.plist"; sourceTree = "<group>"; };
+		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = "ConfirmdWallet/main.m"; sourceTree = "<group>"; };
+		80BFF1540D2432558196D6FB /* Pods-ConfirmdWallet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ConfirmdWallet.release.xcconfig"; path = "Target Support Files/Pods-ConfirmdWallet/Pods-ConfirmdWallet.release.xcconfig"; sourceTree = "<group>"; };
+		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = "ConfirmdWallet/LaunchScreen.storyboard"; sourceTree = "<group>"; };
 		873E9A192ABC1965007BBE48 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		873E9A1B2ABC229E007BBE48 /* AdeyaWallet.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = AdeyaWallet.entitlements; path = AdeyaWallet/AdeyaWallet.entitlements; sourceTree = "<group>"; };
-		AA917715EC32E83A6DF636F8 /* Pods-AdeyaWallet-AdeyaWalletTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AdeyaWallet-AdeyaWalletTests.debug.xcconfig"; path = "Target Support Files/Pods-AdeyaWallet-AdeyaWalletTests/Pods-AdeyaWallet-AdeyaWalletTests.debug.xcconfig"; sourceTree = "<group>"; };
-		B445E499B487521E6A533713 /* Pods-AdeyaWallet-AdeyaWalletTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AdeyaWallet-AdeyaWalletTests.release.xcconfig"; path = "Target Support Files/Pods-AdeyaWallet-AdeyaWalletTests/Pods-AdeyaWallet-AdeyaWalletTests.release.xcconfig"; sourceTree = "<group>"; };
-		D7C8A2ADDBCA31C2A2065DD8 /* libPods-AdeyaWallet-AdeyaWalletTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AdeyaWallet-AdeyaWalletTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		E4990FB34D7D16183A4C1350 /* Pods-AdeyaWallet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AdeyaWallet.debug.xcconfig"; path = "Target Support Files/Pods-AdeyaWallet/Pods-AdeyaWallet.debug.xcconfig"; sourceTree = "<group>"; };
-		E605A541B16C3BB4C72E1446 /* libPods-AdeyaWallet.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AdeyaWallet.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		873E9A1B2ABC229E007BBE48 /* ConfirmdWallet.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = ConfirmdWallet.entitlements; path = ConfirmdWallet/ConfirmdWallet.entitlements; sourceTree = "<group>"; };
+		AA917715EC32E83A6DF636F8 /* Pods-ConfirmdWallet-ConfirmdWalletTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ConfirmdWallet-ConfirmdWalletTests.debug.xcconfig"; path = "Target Support Files/Pods-ConfirmdWallet-ConfirmdWalletTests/Pods-ConfirmdWallet-ConfirmdWalletTests.debug.xcconfig"; sourceTree = "<group>"; };
+		B445E499B487521E6A533713 /* Pods-ConfirmdWallet-ConfirmdWalletTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ConfirmdWallet-ConfirmdWalletTests.release.xcconfig"; path = "Target Support Files/Pods-ConfirmdWallet-ConfirmdWalletTests/Pods-ConfirmdWallet-ConfirmdWalletTests.release.xcconfig"; sourceTree = "<group>"; };
+		D7C8A2ADDBCA31C2A2065DD8 /* libPods-ConfirmdWallet-ConfirmdWalletTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ConfirmdWallet-ConfirmdWalletTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E4990FB34D7D16183A4C1350 /* Pods-ConfirmdWallet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ConfirmdWallet.debug.xcconfig"; path = "Target Support Files/Pods-ConfirmdWallet/Pods-ConfirmdWallet.debug.xcconfig"; sourceTree = "<group>"; };
+		E605A541B16C3BB4C72E1446 /* libPods-ConfirmdWallet.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ConfirmdWallet.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -56,7 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F2240E12B05A470AE6226C40 /* libPods-AdeyaWallet-AdeyaWalletTests.a in Frameworks */,
+				F2240E12B05A470AE6226C40 /* libPods-ConfirmdWallet-ConfirmdWalletTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,20 +64,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				156683D461F3F88414DB26E7 /* libPods-AdeyaWallet.a in Frameworks */,
+				156683D461F3F88414DB26E7 /* libPods-ConfirmdWallet.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		00E356EF1AD99517003FC87E /* AdeyaWalletTests */ = {
+		00E356EF1AD99517003FC87E /* ConfirmdWalletTests */ = {
 			isa = PBXGroup;
 			children = (
-				00E356F21AD99517003FC87E /* AdeyaWalletTests.m */,
+				00E356F21AD99517003FC87E /* ConfirmdWalletTests.m */,
 				00E356F01AD99517003FC87E /* Supporting Files */,
 			);
-			path = AdeyaWalletTests;
+			path = "ConfirmdWalletTests";
 			sourceTree = "<group>";
 		};
 		00E356F01AD99517003FC87E /* Supporting Files */ = {
@@ -88,10 +88,10 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		13B07FAE1A68108700A75B9A /* AdeyaWallet */ = {
+		13B07FAE1A68108700A75B9A /* ConfirmdWallet */ = {
 			isa = PBXGroup;
 			children = (
-				873E9A1B2ABC229E007BBE48 /* AdeyaWallet.entitlements */,
+				873E9A1B2ABC229E007BBE48 /* ConfirmdWallet.entitlements */,
 				873E9A192ABC1965007BBE48 /* GoogleService-Info.plist */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.mm */,
@@ -101,15 +101,15 @@
 				13B07FB71A68108700A75B9A /* main.m */,
 				0E4BFDAE9A3082CAA636A18C /* PrivacyInfo.xcprivacy */,
 			);
-			name = AdeyaWallet;
+			name = "ConfirmdWallet";
 			sourceTree = "<group>";
 		};
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
-				E605A541B16C3BB4C72E1446 /* libPods-AdeyaWallet.a */,
-				D7C8A2ADDBCA31C2A2065DD8 /* libPods-AdeyaWallet-AdeyaWalletTests.a */,
+				E605A541B16C3BB4C72E1446 /* libPods-ConfirmdWallet.a */,
+				D7C8A2ADDBCA31C2A2065DD8 /* libPods-ConfirmdWallet-ConfirmdWalletTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -124,9 +124,9 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
-				13B07FAE1A68108700A75B9A /* AdeyaWallet */,
+				13B07FAE1A68108700A75B9A /* ConfirmdWallet */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
-				00E356EF1AD99517003FC87E /* AdeyaWalletTests */,
+				00E356EF1AD99517003FC87E /* ConfirmdWalletTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				BBD78D7AC51CEA395F1C20DB /* Pods */,
@@ -139,8 +139,8 @@
 		83CBBA001A601CBA00E9B192 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				13B07F961A680F5B00A75B9A /* AdeyaWallet.app */,
-				00E356EE1AD99517003FC87E /* AdeyaWalletTests.xctest */,
+				13B07F961A680F5B00A75B9A /* ConfirmdWallet.app */,
+				00E356EE1AD99517003FC87E /* ConfirmdWalletTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -148,10 +148,10 @@
 		BBD78D7AC51CEA395F1C20DB /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				E4990FB34D7D16183A4C1350 /* Pods-AdeyaWallet.debug.xcconfig */,
-				80BFF1540D2432558196D6FB /* Pods-AdeyaWallet.release.xcconfig */,
-				AA917715EC32E83A6DF636F8 /* Pods-AdeyaWallet-AdeyaWalletTests.debug.xcconfig */,
-				B445E499B487521E6A533713 /* Pods-AdeyaWallet-AdeyaWalletTests.release.xcconfig */,
+				E4990FB34D7D16183A4C1350 /* Pods-ConfirmdWallet.debug.xcconfig */,
+				80BFF1540D2432558196D6FB /* Pods-ConfirmdWallet.release.xcconfig */,
+				AA917715EC32E83A6DF636F8 /* Pods-ConfirmdWallet-ConfirmdWalletTests.debug.xcconfig */,
+				B445E499B487521E6A533713 /* Pods-ConfirmdWallet-ConfirmdWalletTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -159,9 +159,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		00E356ED1AD99517003FC87E /* AdeyaWalletTests */ = {
+		00E356ED1AD99517003FC87E /* ConfirmdWalletTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "AdeyaWalletTests" */;
+			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "ConfirmdWalletTests" */;
 			buildPhases = (
 				856E002B66363EFC22F0B13A /* [CP] Check Pods Manifest.lock */,
 				00E356EA1AD99517003FC87E /* Sources */,
@@ -175,14 +175,14 @@
 			dependencies = (
 				00E356F51AD99517003FC87E /* PBXTargetDependency */,
 			);
-			name = AdeyaWalletTests;
-			productName = AdeyaWalletTests;
-			productReference = 00E356EE1AD99517003FC87E /* AdeyaWalletTests.xctest */;
+			name = "ConfirmdWalletTests";
+			productname = "ConfirmdWalletTests";
+			productReference = 00E356EE1AD99517003FC87E /* ConfirmdWalletTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		13B07F861A680F5B00A75B9A /* AdeyaWallet */ = {
+		13B07F861A680F5B00A75B9A /* ConfirmdWallet */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "AdeyaWallet" */;
+			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "ConfirmdWallet" */;
 			buildPhases = (
 				C4182654831D9C1043F41FF1 /* [CP] Check Pods Manifest.lock */,
 				FD10A7F022414F080027D42C /* Start Packager */,
@@ -198,9 +198,9 @@
 			);
 			dependencies = (
 			);
-			name = AdeyaWallet;
-			productName = AdeyaWallet;
-			productReference = 13B07F961A680F5B00A75B9A /* AdeyaWallet.app */;
+			name = "ConfirmdWallet";
+			productName = "ConfirmdWallet";
+			productReference = 13B07F961A680F5B00A75B9A /* ConfirmdWallet.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -220,7 +220,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "AdeyaWallet" */;
+			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "ConfirmdWallet" */;
 			compatibilityVersion = "Xcode 12.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -233,8 +233,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				13B07F861A680F5B00A75B9A /* AdeyaWallet */,
-				00E356ED1AD99517003FC87E /* AdeyaWalletTests */,
+				13B07F861A680F5B00A75B9A /* ConfirmdWallet */,
+				00E356ED1AD99517003FC87E /* ConfirmdWalletTests */,
 			);
 		};
 /* End PBXProject section */
@@ -283,15 +283,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-AdeyaWallet/Pods-AdeyaWallet-resources-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-ConfirmdWallet/Pods-ConfirmdWallet-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-AdeyaWallet/Pods-AdeyaWallet-resources-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-ConfirmdWallet/Pods-ConfirmdWallet-resources-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AdeyaWallet/Pods-AdeyaWallet-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ConfirmdWallet/Pods-ConfirmdWallet-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		856E002B66363EFC22F0B13A /* [CP] Check Pods Manifest.lock */ = {
@@ -309,7 +309,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-AdeyaWallet-AdeyaWalletTests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-ConfirmdWallet-ConfirmdWalletTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -322,15 +322,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-AdeyaWallet-AdeyaWalletTests/Pods-AdeyaWallet-AdeyaWalletTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-ConfirmdWallet-ConfirmdWalletTests/Pods-ConfirmdWallet-ConfirmdWalletTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-AdeyaWallet-AdeyaWalletTests/Pods-AdeyaWallet-AdeyaWalletTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-ConfirmdWallet-ConfirmdWalletTests/Pods-ConfirmdWallet-ConfirmdWalletTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AdeyaWallet-AdeyaWalletTests/Pods-AdeyaWallet-AdeyaWalletTests-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ConfirmdWallet-ConfirmdWalletTests/Pods-ConfirmdWallet-ConfirmdWalletTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		B55A3683C523918F02C0C678 /* [CP] Copy Pods Resources */ = {
@@ -339,15 +339,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-AdeyaWallet-AdeyaWalletTests/Pods-AdeyaWallet-AdeyaWalletTests-resources-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-ConfirmdWallet-ConfirmdWalletTests/Pods-ConfirmdWallet-ConfirmdWalletTests-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-AdeyaWallet-AdeyaWalletTests/Pods-AdeyaWallet-AdeyaWalletTests-resources-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-ConfirmdWallet-ConfirmdWalletTests/Pods-ConfirmdWallet-ConfirmdWalletTests-resources-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AdeyaWallet-AdeyaWalletTests/Pods-AdeyaWallet-AdeyaWalletTests-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ConfirmdWallet-ConfirmdWalletTests/Pods-ConfirmdWallet-ConfirmdWalletTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		C4182654831D9C1043F41FF1 /* [CP] Check Pods Manifest.lock */ = {
@@ -365,7 +365,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-AdeyaWallet-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-ConfirmdWallet-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -410,15 +410,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-AdeyaWallet/Pods-AdeyaWallet-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-ConfirmdWallet/Pods-ConfirmdWallet-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-AdeyaWallet/Pods-AdeyaWallet-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-ConfirmdWallet/Pods-ConfirmdWallet-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AdeyaWallet/Pods-AdeyaWallet-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ConfirmdWallet/Pods-ConfirmdWallet-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -428,7 +428,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				00E356F31AD99517003FC87E /* AdeyaWalletTests.m in Sources */,
+				00E356F31AD99517003FC87E /* ConfirmdWalletTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -446,7 +446,7 @@
 /* Begin PBXTargetDependency section */
 		00E356F51AD99517003FC87E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 13B07F861A680F5B00A75B9A /* AdeyaWallet */;
+			target = 13B07F861A680F5B00A75B9A /* ConfirmdWallet */;
 			targetProxy = 00E356F41AD99517003FC87E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -454,14 +454,14 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AA917715EC32E83A6DF636F8 /* Pods-AdeyaWallet-AdeyaWalletTests.debug.xcconfig */;
+			baseConfigurationReference = AA917715EC32E83A6DF636F8 /* Pods-ConfirmdWallet-ConfirmdWalletTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = AdeyaWalletTests/Info.plist;
+				INFOPLIST_FILE = "ConfirmdWalletTests/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -473,19 +473,19 @@
 					"-lc++",
 					"$(inherited)",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.confirmdwallet";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AdeyaWallet.app/AdeyaWallet";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ConfirmdWallet.app/ConfirmdWallet";
 			};
 			name = Debug;
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B445E499B487521E6A533713 /* Pods-AdeyaWallet-AdeyaWalletTests.release.xcconfig */;
+			baseConfigurationReference = B445E499B487521E6A533713 /* Pods-ConfirmdWallet-ConfirmdWalletTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
-				INFOPLIST_FILE = AdeyaWalletTests/Info.plist;
+				INFOPLIST_FILE = "ConfirmdWalletTests/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -497,26 +497,26 @@
 					"-lc++",
 					"$(inherited)",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.confirmdwallet";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AdeyaWallet.app/AdeyaWallet";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ConfirmdWallet.app/ConfirmdWallet";
 			};
 			name = Release;
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E4990FB34D7D16183A4C1350 /* Pods-AdeyaWallet.debug.xcconfig */;
+			baseConfigurationReference = E4990FB34D7D16183A4C1350 /* Pods-ConfirmdWallet.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_ENTITLEMENTS = AdeyaWallet/AdeyaWallet.entitlements;
+				CODE_SIGN_ENTITLEMENTS = ConfirmdWallet/ConfirmdWallet.entitlements;
 				CURRENT_PROJECT_VERSION = 60;
 				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = Z5W7KRPGHZ;
 				ENABLE_BITCODE = NO;
-				INFOPLIST_FILE = AdeyaWallet/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "CREDEBL Wallet";
+				INFOPLIST_FILE = "ConfirmdWallet/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "ConfirmdWallet";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -528,8 +528,8 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = id.credebl;
-				PRODUCT_NAME = AdeyaWallet;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.confirmdwallet";
+				PRODUCT_NAME = "ConfirmdWallet";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
@@ -542,19 +542,19 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 80BFF1540D2432558196D6FB /* Pods-AdeyaWallet.release.xcconfig */;
+			baseConfigurationReference = 80BFF1540D2432558196D6FB /* Pods-ConfirmdWallet.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_ENTITLEMENTS = AdeyaWallet/AdeyaWallet.entitlements;
+				CODE_SIGN_ENTITLEMENTS = ConfirmdWallet/ConfirmdWallet.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 60;
 				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = Z5W7KRPGHZ;
-				INFOPLIST_FILE = AdeyaWallet/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "CREDEBL Wallet";
+				INFOPLIST_FILE = "ConfirmdWallet/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "ConfirmdWallet";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -566,8 +566,8 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = id.credebl;
-				PRODUCT_NAME = AdeyaWallet;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.confirmdwallet";
+				PRODUCT_NAME = "ConfirmdWallet";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -727,7 +727,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "AdeyaWalletTests" */ = {
+		00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "ConfirmdWalletTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				00E356F61AD99517003FC87E /* Debug */,
@@ -736,7 +736,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "AdeyaWallet" */ = {
+		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "ConfirmdWallet" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				13B07F941A680F5B00A75B9A /* Debug */,
@@ -745,7 +745,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "AdeyaWallet" */ = {
+		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "ConfirmdWallet" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				83CBBA201A601CBA00E9B192 /* Debug */,

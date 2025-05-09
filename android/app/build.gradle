@@ -77,9 +77,9 @@ android {
 
     compileSdkVersion rootProject.ext.compileSdkVersion
 
-    namespace "id.credebl"
+    namespace "com.confirmdwallet"
     defaultConfig {
-        applicationId "id.credebl"
+        applicationId "com.confirmdwallet"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 18
