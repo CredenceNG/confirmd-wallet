@@ -26,7 +26,7 @@
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>CFBundleURLName</key>
-			<string>id.credebl</string>
+			<string>com.confirmdwallet</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
 				<string>didcomm</string>
@@ -36,7 +36,7 @@
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>CFBundleURLName</key>
-			<string>id.credebl</string>
+			<string>com.confirmdwallet</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
 				<string>link.credebl.id</string>

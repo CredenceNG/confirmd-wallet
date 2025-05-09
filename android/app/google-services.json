@@ -1,21 +1,21 @@
 {
   "project_info": {
-    "project_number": "386865711438",
-    "project_id": "adeya-dev",
-    "storage_bucket": "adeya-dev.appspot.com"
+    "project_number": "650597702762",
+    "project_id": "confirmd-dev",
+    "storage_bucket": "confirmd-dev.firebasestorage.app"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:386865711438:android:0f47392fa853dd6acef61f",
+        "mobilesdk_app_id": "1:650597702762:android:f3bf2d6e256b71d62e7e13",
         "android_client_info": {
-          "package_name": "id.credebl"
+          "package_name": "com.confirmdwallet"
         }
       },
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyBp8evwDYBweWgsnMOnY35_Yqd6QjHWsFM"
+          "current_key": "AIzaSyAstv1KKEb8A2DSAhp703r5GJo2lN4SSPs"
         }
       ],
       "services": {

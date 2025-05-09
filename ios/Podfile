@@ -35,7 +35,7 @@ if linkage != nil
   use_frameworks! :linkage => linkage.to_sym
 end
 
-target 'CREDEBLWallet' do
+target 'ConfirmdWallet' do
   config = use_native_modules!
   pod 'Firebase', :modular_headers => true
   pod 'FirebaseCore', :modular_headers => true
@@ -58,7 +58,7 @@ target 'CREDEBLWallet' do
     :app_path => "#{Pod::Config.instance.installation_root}/.."
   )
 
-  target 'CREDEBLWalletTests' do
+  target 'ConfirmdWalletTests' do
     inherit! :complete
     # Pods for testing
   end
