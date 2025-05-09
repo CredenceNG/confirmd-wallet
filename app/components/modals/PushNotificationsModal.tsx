@@ -63,7 +63,7 @@ const PushNotificationsModal: React.FC<PushNotificationsModalProps> = ({ title, 
         <ScrollView style={[styles.container]}>
           <Text style={[TextTheme.modalTitle, { fontWeight: 'bold', textAlign: 'center' }]}>{title}</Text>
           <Image
-            source={require('../../assets/img/notification.png')}
+            source={require('../../assets/img/notification.svg')}
             resizeMode={'contain'}
             resizeMethod={'resize'}
             style={{

@@ -87,7 +87,7 @@ const OnboardingPages = (onTutorialCompleted: GenericFn): Array<Element> => {
         <View style={styles.endPageContainer}>
           <Text style={[defaultStyle.headerText, styles.headerText, { marginTop: 20 }]}>Share Securely</Text>
           <ScrollView style={styles.ScrollView} contentContainerStyle={{ justifyContent: 'center' }}>
-            <Image source={require('../assets/img/sharesecure.png')} style={[styles.backgroundImage]} />
+            <Image source={require('../assets/img/onboarding.svg')} style={[styles.backgroundImage]} />
             <View style={styles.descriptionText}>
               <Text style={[styles.bodyText]}>
                 Take complete control over your data. Securely connect with people and organizations to share necessary
