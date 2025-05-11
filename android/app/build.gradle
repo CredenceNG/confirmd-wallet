@@ -50,6 +50,10 @@ react {
     //
     //   The list of flags to pass to the Hermes compiler. By default is "-O", "-output-source-map"
     // hermesFlags = ["-O", "-output-source-map"]
+
+    /* Add this configuration */
+    // Specify the path to your Node.js executable
+    nodeExecutableAndArgs = ["/Users/itopa/.nvm/versions/node/v18.18.2/bin/node"]
 }
 
 apply from: "../../node_modules/react-native-vector-icons/fonts.gradle"
