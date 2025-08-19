@@ -35,8 +35,7 @@ const ContactStack: React.FC = () => {
         component={ListContacts} 
         options={() => ({
           title: t('Screens.Contacts'),
-          headerRight: () => null,
-          headerLeft: () => <SettingsMenu />,
+          headerRight: () => <SettingsMenu />,
         })} 
       />
       <Stack.Screen
