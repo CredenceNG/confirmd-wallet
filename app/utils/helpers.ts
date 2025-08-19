@@ -31,6 +31,8 @@ import {
   KeyType,
   DifPresentationExchangeProofFormatService,
   W3cCredentialRecord,
+  DidExchangeState,
+  useConnections,
 } from '@adeya/ssi'
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { DifPresentationExchangeProofFormat, DifPresentationExchangeDefinitionV1 } from '@credo-ts/core'
@@ -1028,14 +1030,36 @@ export const receiveMessageFromDeepLink = async (url: string, agent: AdeyaAgent 
  *
  * @param agent an Agent instance
  * @param uri a URI containing a base64 encoded connection invite in the query parameter
- * @returns boolean indicating if the connection was already established
+ * @returns boolean indicating if the connection was already established (completed state only)
  */
 export const checkIfAlreadyConnected = async (agent: AdeyaAgent, invitationUrl: string) => {
   const invitation = await parseInvitationFromUrl(agent, invitationUrl)
   const outOfBandRecord = await findByReceivedInvitationId(agent, invitation.id)
 
   if (outOfBandRecord) {
-    return true
+    // Check if there's a completed connection for this invitation
+    const connections = await agent.connections.getAll()
+    const existingConnection = connections.find(conn => 
+      conn.outOfBandId === outOfBandRecord.id && 
+      conn.state === DidExchangeState.Completed
+    )
+    
+    // Only block if there's a completed connection
+    if (existingConnection) {
+      return true
+    }
+    
+    // If connection exists but is incomplete, allow retry by deleting the incomplete records
+    const incompleteConnection = connections.find(conn => conn.outOfBandId === outOfBandRecord.id)
+    if (incompleteConnection) {
+      try {
+        await agent.connections.deleteById(incompleteConnection.id)
+        await agent.oob.deleteById(outOfBandRecord.id)
+      } catch (error) {
+        console.log('Error cleaning up incomplete connection:', error)
+        // If cleanup fails, still allow retry
+      }
+    }
   }
 
   return false

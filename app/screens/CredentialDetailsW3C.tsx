@@ -8,6 +8,7 @@ import {
   getW3cCredentialRecordById,
   useConnections,
   useCredentialByState,
+  useCredentialById,
 } from '@adeya/ssi'
 import { BrandingOverlay } from '@hyperledger/aries-oca'
 import { CredentialOverlay } from '@hyperledger/aries-oca/build/legacy'
@@ -79,7 +80,8 @@ const CredentialDetailsW3C: React.FC<CredentialDetailsProps> = ({ navigation, ro
     throw new Error('CredentialDetails route prams were not set properly')
   }
 
-  const { credential } = route?.params
+  const { credentialId } = route?.params
+  const credential = useCredentialById(credentialId)
   const { agent } = useAppAgent()
   const { t, i18n } = useTranslation()
   const { TextTheme, ColorPallet } = useTheme()

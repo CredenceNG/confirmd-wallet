@@ -2,6 +2,8 @@ import { StackScreenProps } from '@react-navigation/stack'
 import React, { ReactNode } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Dimensions, FlatList, Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
+import { useCredentials } from '@adeya/ssi'
+import { useAppAgent } from '../utils/agent'
 
 import ScanButton from '../components/common/ScanButton'
 import NotificationListItem, { NotificationType } from '../components/listItems/NotificationListItem'
@@ -114,7 +116,7 @@ const Home: React.FC<HomeProps> = ({ navigation }) => {
           0,
           ...Array(notifications?.length)
             .fill(0)
-            .map((n: number, i: number) => i * (width - 2 * (offset - offsetPadding)))
+            .map((_: number, i: number) => i * (width - 2 * (offset - offsetPadding)))
             .slice(1),
         ]}
         decelerationRate="fast"

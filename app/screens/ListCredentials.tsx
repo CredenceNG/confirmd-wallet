@@ -118,7 +118,7 @@ const ListCredentials: React.FC<Props> = ({ isHorizontal = false }) => {
                   credential={credential}
                   onPress={() =>
                     navigation.navigate(Screens.CredentialDetails, {
-                      credential: credential as CredentialExchangeRecord,
+                      credentialId: credential.id,
                     })
                   }
                 />

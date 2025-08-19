@@ -82,14 +82,17 @@ android {
     compileSdkVersion rootProject.ext.compileSdkVersion
 
     namespace "com.confirmdwallet"
+    
+    buildFeatures {
+        buildConfig true
+    }
+    
     defaultConfig {
         applicationId "com.confirmdwallet"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
-        versionCode 18
-        versionName "1.0.12"
-
-        missingDimensionStrategy 'react-native-camera', 'general'
+        versionCode 35
+        versionName "1.0.13"
     }
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_17
@@ -152,6 +155,13 @@ configurations.all {
             if (dependency.requested.group == 'org.bouncycastle') {
                 dependency.useTarget 'org.bouncycastle:bcprov-jdk15to18:1.70'
             }
+            // Force consistent Kotlin and kotlinx-coroutines versions
+            if (dependency.requested.group == 'org.jetbrains.kotlin') {
+                dependency.useVersion '2.0.0'
+            }
+            if (dependency.requested.group == 'org.jetbrains.kotlinx' && dependency.requested.name.startsWith('kotlinx-coroutines')) {
+                dependency.useVersion '1.7.3'
+            }
     }
 }
 
@@ -160,6 +170,11 @@ dependencies {
     implementation("com.facebook.react:react-android")
     implementation("com.facebook.react:react-native")
       implementation platform('com.google.firebase:firebase-bom:32.2.3')
+
+    // Explicit Kotlin dependencies for react-native-vision-camera compatibility
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:2.0.0"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.3"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3"
 
     implementation 'net.java.dev.jna:jna:5.2.0'
 

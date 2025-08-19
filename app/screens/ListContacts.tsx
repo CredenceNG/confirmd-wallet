@@ -2,7 +2,7 @@ import { ConnectionRecord, ConnectionType, DidExchangeState, useConnections } fr
 import { StackNavigationProp } from '@react-navigation/stack'
 import React, { useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
-import { FlatList, StyleSheet, View } from 'react-native'
+import { FlatList, StyleSheet, Text, View } from 'react-native'
 
 import HeaderButton, { ButtonLocation } from '../components/buttons/HeaderButton'
 import ContactListItem from '../components/listItems/ContactListItem'
@@ -27,6 +27,20 @@ const ListContacts: React.FC<ListContactsProps> = ({ navigation }) => {
       backgroundColor: ColorPallet.brand.primaryBackground,
       height: 1,
       marginHorizontal: 16,
+    },
+    descriptionContainer: {
+      backgroundColor: ColorPallet.brand.secondaryBackground,
+      padding: 16,
+      marginHorizontal: 16,
+      marginTop: 16,
+      marginBottom: 8,
+      borderRadius: 8,
+    },
+    descriptionText: {
+      color: ColorPallet.grayscale.mediumGrey,
+      fontSize: 14,
+      lineHeight: 20,
+      textAlign: 'center',
     },
   })
   const { records } = useConnections()
@@ -65,6 +79,11 @@ const ListContacts: React.FC<ListContactsProps> = ({ navigation }) => {
 
   return (
     <View>
+      <View style={style.descriptionContainer}>
+        <Text style={style.descriptionText}>
+          Confirmed Organizations and Persons you have connected with over a secure and private line. Nothing is shared without your permission
+        </Text>
+      </View>
       <FlatList
         style={style.list}
         data={connections}

@@ -186,7 +186,7 @@ const Settings: React.FC<SettingsProps> = ({ navigation }) => {
           onPress: () =>
             navigation
               .getParent()
-              ?.navigate(Stacks.ContactStack, { screen: Screens.Contacts, params: { navigation: navigation } }),
+              ?.navigate(Stacks.ContactStack, { screen: Screens.Contacts }),
         },
         {
           title: t('WhatAreContacts.Title'),
@@ -348,7 +348,6 @@ const Settings: React.FC<SettingsProps> = ({ navigation }) => {
         onPress: () =>
           navigation.getParent()?.navigate(Stacks.ProofRequestsStack, {
             screen: Screens.ProofRequests,
-            params: { navigation: navigation },
           }),
       },
     ],
@@ -380,7 +379,6 @@ const Settings: React.FC<SettingsProps> = ({ navigation }) => {
           onPress: () =>
             navigation.getParent()?.navigate(Stacks.ContactStack, {
               screen: Screens.ConnectionInvitation,
-              params: { navigation: navigation },
             }),
         },
       ],

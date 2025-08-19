@@ -1,6 +1,6 @@
 import type { StackScreenProps } from '@react-navigation/stack'
 
-import { useProofById, DidExchangeState, deleteConnectionRecordById } from '@adeya/ssi'
+import { useProofById } from '@adeya/ssi'
 import { useIsFocused } from '@react-navigation/core'
 import { useFocusEffect } from '@react-navigation/native'
 import React, { useCallback, useEffect, useState } from 'react'
@@ -12,30 +12,25 @@ import {
   ScrollView,
   StyleSheet,
   Text,
-  Vibration,
   View,
 } from 'react-native'
 import { SafeAreaView } from 'react-native-safe-area-context'
 
 import {
-  ProofCustomMetadata,
-  ProofMetadata,
   isPresentationFailed,
   isPresentationReceived,
   linkProofWithTemplate,
-  sendProofRequest,
+  createConnectionlessProofRequestInvitation,
 } from '../../verifier'
 import LoadingIndicator from '../components/animated/LoadingIndicator'
 import Button, { ButtonType } from '../components/buttons/Button'
 import QRRenderer from '../components/misc/QRRenderer'
 import { EventTypes } from '../constants'
 import { useTheme } from '../contexts/theme'
-import { useConnectionByOutOfBandId, useOutOfBandByConnectionId } from '../hooks/connections'
 import { useTemplate } from '../hooks/proof-request-templates'
 import { BifoldError } from '../types/error'
 import { ProofRequestsStackParams, Screens } from '../types/navigators'
 import { useAppAgent } from '../utils/agent'
-import { createTempConnectionInvitation } from '../utils/helpers'
 import { testIdWithKey } from '../utils/testable'
 
 type ProofRequestingProps = StackScreenProps<ProofRequestsStackParams, Screens.ProofRequesting>
@@ -64,13 +59,9 @@ const ProofRequesting: React.FC<ProofRequestingProps> = ({ route, navigation }) 
   const isFocused = useIsFocused()
   const [generating, setGenerating] = useState(true)
   const [message, setMessage] = useState<string | undefined>(undefined)
-  const [connectionRecordId, setConnectionRecordId] = useState<string | undefined>(undefined)
   const [proofRecordId, setProofRecordId] = useState<string | undefined>(undefined)
-  const record = useConnectionByOutOfBandId(connectionRecordId ?? '')
   const proofRecord = useProofById(proofRecordId ?? '')
   const template = useTemplate(templateId)
-
-  const goalCode = useOutOfBandByConnectionId(agent, record?.id ?? '')?.outOfBandInvitation.goalCode
 
   const styles = StyleSheet.create({
     container: {
@@ -127,10 +118,16 @@ const ProofRequesting: React.FC<ProofRequestingProps> = ({ route, navigation }) 
     try {
       setMessage(undefined)
       setGenerating(true)
-      const result = await createTempConnectionInvitation(agent, 'verify')
+      
+      if (!template) {
+        throw new Error('Template not found')
+      }
+      
+      const result = await createConnectionlessProofRequestInvitation(agent, template, predicateValues)
       if (result) {
-        setConnectionRecordId(result.record.id)
+        setProofRecordId(result.proofRecord.id)
         setMessage(result.invitationUrl)
+        linkProofWithTemplate(agent, result.proofRecord, templateId)
       }
     } catch (e) {
       const error = new BifoldError(t('Error.Title1038'), t('Error.Message1038'), (e as Error).message, 1038)
@@ -139,7 +136,7 @@ const ProofRequesting: React.FC<ProofRequestingProps> = ({ route, navigation }) 
     } finally {
       setGenerating(false)
     }
-  }, [])
+  }, [template, predicateValues, templateId])
 
   useFocusEffect(
     useCallback(() => {
@@ -160,40 +157,14 @@ const ProofRequesting: React.FC<ProofRequestingProps> = ({ route, navigation }) 
     }
   }, [isFocused])
 
-  useEffect(() => {
-    if (!template) {
-      return
-    }
-
-    const sendAsyncProof = async () => {
-      if (record && record.state === DidExchangeState.Completed) {
-        //send haptic feedback to verifier that connection is completed
-        Vibration.vibrate()
-        setGenerating(true)
-        // send proof logic
-        const result = await sendProofRequest(agent, template, record.id, predicateValues)
-        if (result?.proofRecord) {
-          // verifier side doesn't have access to the goal code so we need to add metadata here
-          const metadata = result.proofRecord.metadata.get(ProofMetadata.customMetadata) as ProofCustomMetadata
-          result.proofRecord.metadata.set(ProofMetadata.customMetadata, { ...metadata, delete_conn_after_seen: true })
-          linkProofWithTemplate(agent, result.proofRecord, templateId)
-        }
-        setProofRecordId(result?.proofRecord.id)
-      }
-    }
-    sendAsyncProof()
-  }, [record, template])
-
+  // Handle proof record updates for connectionless requests
   useEffect(() => {
     if (proofRecord && (isPresentationReceived(proofRecord) || isPresentationFailed(proofRecord))) {
-      if (goalCode?.endsWith('verify.once')) {
-        deleteConnectionRecordById(agent, record?.id ?? '')
-      }
-
       setGenerating(true)
       navigation.navigate(Screens.ProofDetails, { recordId: proofRecord.id })
     }
-  }, [proofRecord])
+  }, [proofRecord, navigation])
+
 
   return (
     <SafeAreaView style={styles.container} edges={['left', 'right']}>

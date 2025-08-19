@@ -5,6 +5,7 @@ import {
   updateCredentialExchangeRecord,
   deleteCredentialExchangeRecordById,
   useConnections,
+  useCredentialById,
 } from '@adeya/ssi'
 import { BrandingOverlay } from '@hyperledger/aries-oca'
 import { BrandingOverlayType, CredentialOverlay } from '@hyperledger/aries-oca/build/legacy'
@@ -55,9 +56,17 @@ const CredentialDetails: React.FC<CredentialDetailsProps> = ({ navigation, route
     throw new Error('CredentialDetails route prams were not set properly')
   }
 
-  const { credential } = route?.params
-
-  const credentialId = credential.id
+  const { credentialId } = route?.params
+  const credential = useCredentialById(credentialId)
+  
+  if (!credential) {
+    return (
+      <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+        <Text>Credential not found</Text>
+      </View>
+    )
+  }
+  
   const schemaId = credential?.metadata?.data['_anoncreds/credential']?.schemaId
   const attributes = credential?.credentialAttributes?.map(attribute => ({
     name: attribute.name,

@@ -30,7 +30,7 @@ export const defaultConfiguration: ConfigurationContext = {
     brandingOverlayType: BrandingOverlayType.Branding10,
     preLoad: true,
   }),
-  proofTemplateBaseUrl: Config.PROOF_TEMPLATE_URL ?? '',
+  proofTemplateBaseUrl: Config.PROOF_TEMPLATE_URL || undefined,
   scan: Scan,
   useBiometry: UseBiometry,
   record: Record,

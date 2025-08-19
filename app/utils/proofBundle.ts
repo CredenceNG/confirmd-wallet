@@ -61,11 +61,14 @@ export interface ProofBundleResolverType {
   resolveById: (templateId: string, acceptDevRestrictions: boolean) => Promise<ProofRequestTemplate | undefined>
 }
 
-export const useRemoteProofBundleResolver = (indexFileBaseUrl: string | undefined): ProofBundleResolverType => {
+export const createProofBundleResolver = (
+  indexFileBaseUrl: string | undefined, 
+  proofRequestTemplates?: (acceptDevRestrictions?: boolean) => ProofRequestTemplate[]
+): ProofBundleResolverType => {
   if (indexFileBaseUrl) {
     return new RemoteProofBundleResolver(indexFileBaseUrl)
   } else {
-    return new DefaultProofBundleResolver()
+    return new DefaultProofBundleResolver(proofRequestTemplates)
   }
 }
 
@@ -118,19 +121,19 @@ export class RemoteProofBundleResolver implements ProofBundleResolverType {
 
 export class DefaultProofBundleResolver implements ProofBundleResolverType {
   private proofRequestTemplates
-  public constructor() {
-    const { proofRequestTemplates } = useConfiguration()
+  public constructor(proofRequestTemplates?: (acceptDevRestrictions?: boolean) => ProofRequestTemplate[]) {
     this.proofRequestTemplates = proofRequestTemplates ?? useProofRequestTemplates
   }
   public async resolve(acceptDevRestrictions: boolean): Promise<ProofRequestTemplate[]> {
-    return Promise.resolve(this.proofRequestTemplates(acceptDevRestrictions))
+    const templates = this.proofRequestTemplates(acceptDevRestrictions);
+    return Promise.resolve(templates)
   }
   public async resolveById(
     templateId: string,
     acceptDevRestrictions: boolean,
   ): Promise<ProofRequestTemplate | undefined> {
-    return Promise.resolve(
-      this.proofRequestTemplates(acceptDevRestrictions).find(template => template.id === templateId),
-    )
+    const templates = this.proofRequestTemplates(acceptDevRestrictions);
+    const template = templates.find(template => template.id === templateId);
+    return Promise.resolve(template)
   }
 }

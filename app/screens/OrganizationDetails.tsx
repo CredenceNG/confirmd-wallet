@@ -1,4 +1,4 @@
-import { useConnections } from '@adeya/ssi'
+import { useConnections, DidExchangeState } from '@adeya/ssi'
 import { RouteProp, useNavigation, useRoute } from '@react-navigation/core'
 import React, { useEffect, useMemo, useState } from 'react'
 import { useTranslation } from 'react-i18next'
@@ -45,7 +45,9 @@ const OrganizationDetails: React.FC = () => {
 
   const isAlreadyConnected = useMemo(() => {
     return connections?.some(
-      connection => connection.theirLabel?.replace(/\s/g, '').trim() === params?.name.replace(/\s/g, '').trim(),
+      connection => 
+        connection.theirLabel?.replace(/\s/g, '').trim() === params?.name.replace(/\s/g, '').trim() &&
+        connection.state === DidExchangeState.Completed
     )
   }, [connections, params])
 

@@ -1,5 +1,3 @@
-import type { BarCodeReadEvent } from 'react-native-camera'
-
 import { ConnectionRecord, getOID4VCCredentialsForProofRequest, parseInvitationUrl } from '@adeya/ssi'
 import { StackScreenProps } from '@react-navigation/stack'
 import React, { useState, useEffect, useCallback } from 'react'
@@ -88,7 +86,7 @@ const Scan: React.FC<ScanProps> = ({ navigation, route }) => {
           message: type,
           createdAt: connectionRecord?.createdAt, // Assuming `data` has `createdAt` field
           correspondenceId: connectionRecord?.id,
-          connection: contactLabel,
+          connection: contactLabel || undefined,
         }
         // Save the history record asynchronously
         await saveHistory(recordData, agent)
@@ -216,13 +214,13 @@ const Scan: React.FC<ScanProps> = ({ navigation, route }) => {
     }
   }
 
-  const handleCodeScan = async (event: BarCodeReadEvent) => {
+  const handleCodeScan = async (data: string) => {
     setQrCodeScanError(null)
     try {
-      const uri = event.data
+      const uri = data
       await handleInvitation(uri)
     } catch (e: unknown) {
-      const error = new QrCodeScanError(t('Scan.InvalidQrCode'), event.data)
+      const error = new QrCodeScanError(t('Scan.InvalidQrCode'), data)
       setQrCodeScanError(error)
     }
   }

@@ -49,7 +49,7 @@ import { createDefaultStackOptions } from './defaultStackOptions'
 
 const RootStack: React.FC = () => {
   const [state, dispatch] = useStore()
-  const { removeSavedWalletSecret } = useAuth()
+  const auth = useAuth()
   const { agent } = useAppAgent()
   const appState = useRef(AppState.currentState)
   const [backgroundTime, setBackgroundTime] = useState<number | undefined>(undefined)
@@ -79,7 +79,7 @@ const RootStack: React.FC = () => {
   const lockoutUser = async () => {
     if (agent && state.authentication.didAuthenticate) {
       // make sure agent is shutdown so wallet isn't still open
-      removeSavedWalletSecret()
+      auth?.removeSavedWalletSecret()
       await agent.wallet.close()
       await agent.shutdown()
       dispatch({

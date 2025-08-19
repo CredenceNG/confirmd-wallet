@@ -13,6 +13,7 @@ import { TabStackParams, TabStacks } from '../types/navigators'
 import { isTablet, orientation, Orientation } from '../utils/helpers'
 import { testIdWithKey } from '../utils/testable'
 
+import ContactStack from './ContactStack'
 import CredentialStack from './CredentialStack'
 import HomeStack from './HomeStack'
 import OrganizationStack from './OrganizationStack'
@@ -132,6 +133,30 @@ const TabStack: React.FC = () => {
             tabBarShowLabel: false,
             tabBarAccessibilityLabel: t('TabStack.Credentials'),
             tabBarTestID: testIdWithKey(t('TabStack.Credentials')),
+          }}
+        />
+        <Tab.Screen
+          name={TabStacks.ContactStack}
+          component={ContactStack}
+          options={{
+            tabBarIconStyle: styles.tabBarIcon,
+            tabBarIcon: ({ color, focused }) => (
+              <View style={{ ...TabTheme.tabBarContainerStyle, justifyContent: showLabels ? 'flex-end' : 'center' }}>
+                <Icon name={focused ? 'account-group' : 'account-group-outline'} color={color} size={30} />
+                {showLabels && (
+                  <Text
+                    style={{
+                      ...TabTheme.tabBarTextStyle,
+                      color: focused ? TabTheme.tabBarActiveTintColor : TabTheme.tabBarInactiveTintColor,
+                    }}>
+                    {t('TabStack.Connections')}
+                  </Text>
+                )}
+              </View>
+            ),
+            tabBarShowLabel: false,
+            tabBarAccessibilityLabel: t('TabStack.Connections'),
+            tabBarTestID: testIdWithKey(t('TabStack.Connections')),
           }}
         />
       </Tab.Navigator>

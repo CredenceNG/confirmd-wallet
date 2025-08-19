@@ -503,7 +503,8 @@ const translation = {
     "Home": "Home",
     "Scan": "Scan",
     "Credentials": "Credentials",
-    "Explore":"Explore"
+    "Explore":"Explore",
+    "Connections": "Connections"
   },
   "RootStack": {
     "Contacts": "Contacts",
@@ -513,6 +514,8 @@ const translation = {
     "PermissionToUseCamera": "Permission to use camera",
     "WeNeedYourPermissionToUseYourCamera": "We need your permission to use your camera",
     "Ok": "Ok",
+    "CameraNotAvailable": "Camera not available",
+    "ScanInstruction": "Position the QR code within the frame to scan",
   },
   "QRRender": {
     "GenerationError": "Unable to generate QR code",
@@ -546,7 +549,7 @@ const translation = {
     "Settings": "Settings",
     "Tours": "App guides",
     "Language": "Language",
-    "Contacts": "Contacts",
+    "Contacts": "Connections",
     "Decline": "Decline",
     "ContactDetails": "Contact Details",
     "Biometry": "Biometrics",
@@ -770,4 +773,4 @@ const translation = {
   }
 }
 
-export default translation
+export default translation;

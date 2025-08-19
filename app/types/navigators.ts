@@ -81,6 +81,7 @@ export enum TabStacks {
   ConnectStack = 'Tab Connect Stack',
   CredentialStack = 'Tab Credential Stack',
   OrganizationStack = 'Tab OrganizationStack Stack',
+  ContactStack = 'Tab Contact Stack',
 }
 
 export type RootStackParams = {
@@ -99,6 +100,7 @@ export type TabStackParams = {
   [TabStacks.ConnectStack]: NavigatorScreenParams<ConnectStackParams>
   [TabStacks.CredentialStack]: NavigatorScreenParams<CredentialStackParams>
   [TabStacks.OrganizationStack]: NavigatorScreenParams<OrganizationStackParams>
+  [TabStacks.ContactStack]: NavigatorScreenParams<ContactStackParams>
 }
 
 export type AuthenticateStackParams = {
@@ -134,7 +136,7 @@ export type ContactStackParams = {
 }
 
 export type ProofRequestsStackParams = {
-  [Screens.ProofRequests]: { connectionId?: string }
+  [Screens.ProofRequests]: { connectionId?: string } | undefined
   [Screens.ProofRequesting]: { templateId: string; predicateValues?: Record<string, Record<string, number>> }
   [Screens.ProofDetails]: { recordId: string; isHistory?: boolean; senderReview?: boolean }
   [Screens.ProofRequestDetails]: { templateId: string; connectionId?: string }
@@ -161,7 +163,7 @@ export type ProofRequestsStackParams = {
 
 export type CredentialStackParams = {
   [Screens.Credentials]: undefined
-  [Screens.CredentialDetails]: { credential: CredentialExchangeRecord }
+  [Screens.CredentialDetails]: { credentialId: string }
   [Screens.CredentialDetailsW3C]: { credential: W3cCredentialRecord }
   [Screens.RenderCertificate]: { filePath: string }
   [Screens.Scan]: undefined
@@ -183,7 +185,7 @@ export type OrganizationStackParams = {
 export type HomeStackParams = {
   [Screens.Home]: undefined
   [Screens.Notifications]: undefined
-  [Screens.CredentialDetails]: { credential: CredentialExchangeRecord }
+  [Screens.CredentialDetails]: { credentialId: string }
   [Screens.CredentialDetailsW3C]: { credential: W3cCredentialRecord }
   [Screens.HistoryPage]: undefined
   [Screens.Credentials]: undefined

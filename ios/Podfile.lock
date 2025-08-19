@@ -469,14 +469,6 @@ PODS:
     - glog
   - react-native-blob-util (0.19.11):
     - React-Core
-  - react-native-camera (4.2.1):
-    - React-Core
-    - react-native-camera/RCT (= 4.2.1)
-    - react-native-camera/RN (= 4.2.1)
-  - react-native-camera/RCT (4.2.1):
-    - React-Core
-  - react-native-camera/RN (4.2.1):
-    - React-Core
   - react-native-config (1.5.5):
     - react-native-config/App (= 1.5.5)
   - react-native-config/App (1.5.5):
@@ -674,6 +666,12 @@ PODS:
     - SSZipArchive (~> 2.5.5)
   - SocketRocket (0.6.1)
   - SSZipArchive (2.5.5)
+  - VisionCamera (4.6.1):
+    - VisionCamera/Core (= 4.6.1)
+    - VisionCamera/React (= 4.6.1)
+  - VisionCamera/Core (4.6.1)
+  - VisionCamera/React (4.6.1):
+    - React-Core
   - Yoga (1.14.0)
 
 DEPENDENCIES:
@@ -708,7 +706,6 @@ DEPENDENCIES:
   - React-jsinspector (from `../node_modules/react-native/ReactCommon/jsinspector`)
   - React-logger (from `../node_modules/react-native/ReactCommon/logger`)
   - react-native-blob-util (from `../node_modules/react-native-blob-util`)
-  - react-native-camera (from `../node_modules/react-native-camera`)
   - react-native-config (from `../node_modules/react-native-config`)
   - react-native-document-picker (from `../node_modules/react-native-document-picker`)
   - react-native-get-random-values (from `../node_modules/react-native-get-random-values`)
@@ -758,6 +755,7 @@ DEPENDENCIES:
   - RNSVG (from `../node_modules/react-native-svg`)
   - RNVectorIcons (from `../node_modules/react-native-vector-icons`)
   - RNZipArchive (from `../node_modules/react-native-zip-archive`)
+  - VisionCamera (from `../node_modules/react-native-vision-camera`)
   - Yoga (from `../node_modules/react-native/ReactCommon/yoga`)
 
 SPEC REPOS:
@@ -836,8 +834,6 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/ReactCommon/logger"
   react-native-blob-util:
     :path: "../node_modules/react-native-blob-util"
-  react-native-camera:
-    :path: "../node_modules/react-native-camera"
   react-native-config:
     :path: "../node_modules/react-native-config"
   react-native-document-picker:
@@ -936,6 +932,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native-vector-icons"
   RNZipArchive:
     :path: "../node_modules/react-native-zip-archive"
+  VisionCamera:
+    :path: "../node_modules/react-native-vision-camera"
   Yoga:
     :path: "../node_modules/react-native/ReactCommon/yoga"
 
@@ -985,7 +983,6 @@ SPEC CHECKSUMS:
   React-jsinspector: 853b8631b908636bb09ef77cb217376c38a0c8ff
   React-logger: 9ca44bb5703bf2355f3c2d2e5e67bfe98ca2dc34
   react-native-blob-util: 39a20f2ef11556d958dc4beb0aa07d1ef2690745
-  react-native-camera: 3eae183c1d111103963f3dd913b65d01aef8110f
   react-native-config: 3367df9c1f25bb96197007ec531c7087ed4554c3
   react-native-document-picker: 2b8f18667caee73a96708a82b284a4f40b30a156
   react-native-get-random-values: 21325b2244dfa6b58878f51f9aa42821e7ba3d06
@@ -1037,6 +1034,7 @@ SPEC CHECKSUMS:
   RNZipArchive: 7bb4c70d6aa2dd235212c0a4a3de0a4e237e2569
   SocketRocket: f32cd54efbe0f095c4d7594881e52619cfe80b17
   SSZipArchive: c69881e8ac5521f0e622291387add5f60f30f3c4
+  VisionCamera: c95a8ad535f527562be1fb05fb2fd324578e769c
   Yoga: ef534101bb891fb09bae657417f34d399c1efe38
 
 PODFILE CHECKSUM: eb46143b5af0da22b0da39c3f488dd43f34490f7

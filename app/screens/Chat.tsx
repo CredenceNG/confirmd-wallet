@@ -172,7 +172,7 @@ const Chat: React.FC<ChatProps> = ({ navigation, route }) => {
               [CredentialState.Done]: () => {
                 navigation.navigate(Stacks.ContactStack as any, {
                   screen: isW3CCredential(record) ? Screens.CredentialDetailsW3C : Screens.CredentialDetails,
-                  params: { credential: record },
+                  params: { credentialId: record.id },
                 })
               },
               [CredentialState.OfferReceived]: () => {
@@ -279,7 +279,7 @@ const Chat: React.FC<ChatProps> = ({ navigation, route }) => {
   const onSendRequest = useCallback(async () => {
     navigation.navigate(Stacks.ProofRequestsStack as any, {
       screen: Screens.ProofRequests,
-      params: { navigation: navigation, connectionId },
+      params: { connectionId },
     })
   }, [navigation, connectionId])
 
