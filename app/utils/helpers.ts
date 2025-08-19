@@ -32,7 +32,6 @@ import {
   DifPresentationExchangeProofFormatService,
   W3cCredentialRecord,
   DidExchangeState,
-  useConnections,
 } from '@adeya/ssi'
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { DifPresentationExchangeProofFormat, DifPresentationExchangeDefinitionV1 } from '@credo-ts/core'
@@ -1056,8 +1055,9 @@ export const checkIfAlreadyConnected = async (agent: AdeyaAgent, invitationUrl: 
         await agent.connections.deleteById(incompleteConnection.id)
         await agent.oob.deleteById(outOfBandRecord.id)
       } catch (error) {
+        // Error cleaning up incomplete connection, but allow retry
+        // eslint-disable-next-line no-console
         console.log('Error cleaning up incomplete connection:', error)
-        // If cleanup fails, still allow retry
       }
     }
   }
