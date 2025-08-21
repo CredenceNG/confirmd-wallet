@@ -62,6 +62,10 @@ const ProofRequesting: React.FC<ProofRequestingProps> = ({ route, navigation }) 
   const [proofRecordId, setProofRecordId] = useState<string | undefined>(undefined)
   const proofRecord = useProofById(proofRecordId ?? '')
   const template = useTemplate(templateId)
+  
+  // Debug logging
+  console.log('ProofRequesting - templateId:', templateId)
+  console.log('ProofRequesting - template:', template)
 
   const styles = StyleSheet.create({
     container: {

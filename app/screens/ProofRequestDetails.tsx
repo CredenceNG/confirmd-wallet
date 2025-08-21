@@ -328,6 +328,7 @@ const ProofRequestDetails: React.FC<ProofRequestDetailsProps> = ({ route, naviga
       navigation.getParent()?.navigate(Screens.Chat, { connectionId })
     } else {
       // Else redirect to the screen with connectionless request
+      console.log('ProofRequestDetails - Navigating to ProofRequesting with:', { templateId, predicateValues: customPredicateValues })
       navigation.navigate(Screens.ProofRequesting, { templateId, predicateValues: customPredicateValues })
     }
   }, [agent, template, templateId, connectionId, customPredicateValues, invalidPredicate])

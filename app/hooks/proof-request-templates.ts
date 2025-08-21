@@ -33,17 +33,20 @@ export const useTemplate = (templateId: string): ProofRequestTemplate | undefine
     return createProofBundleResolver(proofTemplateBaseUrl, configTemplates)
   }, [proofTemplateBaseUrl, configTemplates])
   
-  const acceptDevCredentials = true
+  const acceptDevCredentials = false
 
   useEffect(() => {
+    console.log('useTemplate - Starting resolution for templateId:', templateId)
     resolver.resolveById(templateId, acceptDevCredentials).then(template => {
+      console.log('useTemplate - Resolved template for', templateId, ':', template)
       if (template) {
         setProofRequestTemplate(applyTemplateMarkers(template))
       } else {
+        console.log('useTemplate - No template found for', templateId)
         setProofRequestTemplate(undefined)
       }
     }).catch(error => {
-      console.error('Error resolving template:', error);
+      console.error('Error resolving template:', templateId, error);
       setProofRequestTemplate(undefined)
     })
   }, [resolver, templateId, acceptDevCredentials])
